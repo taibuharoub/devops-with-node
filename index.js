@@ -7,6 +7,10 @@ const PORT = process.env.PORT || 3000;
 
 app.use(morgan("dev"));
 
+app.get("/", (req, res, next) => {
+  res.send("<h1>Server Running</h1>")
+})
+
 app.listen(PORT, () => {
   console.log(`Server started at http://localhost:${PORT}`.yellow.bold);
 });
