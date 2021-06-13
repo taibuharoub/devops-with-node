@@ -10,6 +10,7 @@ exports.signUp = async (req, res, next) => {
       username,
       password: hashPassword,
     });
+    req.session.user = newUser //to automatically log in the user after sign up
     res.status(201).json({ status: true, userId: newUser._id });
   } catch (err) {
     if (!err.statusCode) {
@@ -34,7 +35,8 @@ exports.login = async (req, res, next) => {
       error.statusCode = 401;
       throw error;
     }
-    res.status(200).json({ status: true, userId: user._id});
+    req.session.user = user;
+    res.status(200).json({ status: true, userId: user._id });
   } catch (err) {
     if (!err.statusCode) {
       err.statusCode = 500;
