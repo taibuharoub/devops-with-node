@@ -9,6 +9,8 @@ const postRouter = require("./routes/post");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.use(express.json({ limit: "1mb" }));
+
 app.get("/", (req, res, next) => {
   res.send("<h1>Server Up and Running</h1>");
 });
