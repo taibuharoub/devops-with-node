@@ -5,6 +5,7 @@ const connectDB = require("./util/db");
 connectDB();
 
 const postRouter = require("./routes/post");
+const authRouter = require("./routes/auth");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -16,6 +17,7 @@ app.get("/", (req, res, next) => {
 });
 
 app.use("/api/v1/posts", postRouter);
+app.use("/api/v1/auth", authRouter);
 
 app.use((error, req, res, next) => {
   console.log(error);
