@@ -1,6 +1,7 @@
 const express = require("express");
 
 const connectDB = require("./util/db");
+const red = require("./util/redis")
 
 connectDB();
 
@@ -10,6 +11,7 @@ const authRouter = require("./routes/auth");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.use(red); //sessions
 app.use(express.json({ limit: "1mb" }));
 
 app.get("/", (req, res, next) => {
