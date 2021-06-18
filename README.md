@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to devops-with-node 👋</h1>
+<h1 align="center">Devops with Node and Express</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/taibuharoub/devops-with-node#readme" target="_blank">
@@ -16,6 +16,14 @@
 
 ### 🏠 [Homepage](https://github.com/taibuharoub/devops-with-node#readme)
 
+## Features
+- Redis 
+- MongoDB
+- Nginx
+
+## Setup
+Clone this repo to your desktop and run `npm install` to install all the dependencies.
+
 ## Install
 
 ```sh
@@ -24,8 +32,11 @@ npm install
 
 ## Usage
 
+Add ".env.example to ".env" and update the values/settings to your own
+
+
 ```sh
-npm run start
+npm start
 ```
 
 ## Run tests
@@ -52,4 +63,3 @@ Give a ⭐️ if this project helped you!
 This project is [ISC](https://github.com/taibuharoub/devops-with-node/blob/master/LICENSE) licensed.
 
 ***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
