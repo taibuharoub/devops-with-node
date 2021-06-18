@@ -33,7 +33,7 @@ app.use(
 );
 app.use(express.json({ limit: "1mb" }));
 
-app.get("/", (req, res, next) => {
+app.get("/api/v1", (req, res, next) => {
   res.send("<h1>Server Up and Running</h1>");
 });
 
